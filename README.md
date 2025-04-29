@@ -5,3 +5,7 @@
 
 ## 2、支持右键、快捷键、run按钮等多种运行方式
 ![](pic2.png)
+
+## 3. Save before run
+
+## 4. "python3 -m" --> "python -m"
