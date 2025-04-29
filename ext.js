@@ -34,15 +34,23 @@ function getPythonPath(uri) {
 }
 
 function runPython(uri) {
+    // Get the active editor
+    const editor = vscode.window.activeTextEditor;
 
-    const pythonPath = getPythonPath(uri);
-    // vscode.window.showInformationMessage("pythonPath: "+pythonPath)
-    
-    const terminal = vscode.window.activeTerminal || vscode.window.createTerminal();
-    terminal.show(true);
-    terminal.sendText("python -m " + pythonPath);
-
+    if (editor) {
+        // Save the document before running
+        editor.document.save().then(() => {
+            const pythonPath = getPythonPath(uri);
+            
+            const terminal = vscode.window.activeTerminal || vscode.window.createTerminal();
+            terminal.show(true);
+            terminal.sendText("python -m " + pythonPath);
+        });
+    } else {
+        vscode.window.showErrorMessage("No active editor found.");
+    }
 }
+
 
 
 function activate(context) {
