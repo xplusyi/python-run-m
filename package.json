@@ -1,7 +1,7 @@
 {
     "name": "run-python-m",
     "publisher": "jack-duo",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "engines": {
         "vscode": "^1.47.3"
     },
@@ -77,6 +77,6 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/jianduo1/pyrun"
+        "url": "https://github.com/xplusyi/python-run-m/"
     }
 }
