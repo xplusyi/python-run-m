@@ -40,7 +40,7 @@ function runPython(uri) {
     
     const terminal = vscode.window.activeTerminal || vscode.window.createTerminal();
     terminal.show(true);
-    terminal.sendText("python3 -m "+pythonPath);
+    terminal.sendText("python -m " + pythonPath);
 
 }
 
